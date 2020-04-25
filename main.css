@@ -5,10 +5,9 @@ body {
 
 h1 {
   text-align: center;
-  background-color: lightgray;
 }
 
-.animals {
+#animals {
   display: flex;
   flex-flow: row wrap;
 }
@@ -21,26 +20,66 @@ h1 {
   float: left;
   width: 200px;
   padding: 14px 16px;
-
-}
-
-.animals-card h2 {
-  background-color: lightgray;
-  font-weight: bold;
-  
-}
-
-.animals-card h3 {
-  margin-bottom: 10px;
   text-align: center;
+
+}
+
+.animals-card-h2.Cat{
+  margin-bottom: 10px;
+  background-color: lightpink;
+  font-weight: bold;
+}
+
+.animals-card-h2.Dog{
+  margin-bottom: 10px;
+  background-color: lightsalmon;
+  font-weight: bold;
+}
+
+.animals-card-h2.Rat{
+  margin-bottom: 10px;
+  background-color: lightseagreen;
+  font-weight: bold;
+}
+
+.animals-card-footer.Cat{
+  margin-bottom: 10px;
+  background-color: lightpink;
+}
+
+.animals-card-footer.Dog{
+  margin-bottom: 10px;
+  background-color: lightsalmon;
+}
+
+.animals-card-footer.Rat{
+  margin-bottom: 10px;
+  background-color: lightseagreen;
 }
 
 .animals-card h4 {
   margin-bottom: 10px;
-  text-align: center;
 }
 
 .animals-card p {
   margin-bottom: 10px;
-  text-align: center;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+#catButton {
+  background-color: lightpink;
+  align-content: center;
+}
+
+#dogButton {
+  background-color: lightsalmon;
+}
+
+#ratButton {
+  background-color: lightseagreen;
 }

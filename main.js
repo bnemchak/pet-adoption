@@ -1,7 +1,7 @@
 const pets = [
 {
   imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Odd-eyed_Turkish_Angora_cat_-_20080830.jpg/200px-Odd-eyed_Turkish_Angora_cat_-_20080830.jpg',
-  name: 'Lara',
+  name: 'Zara',
   color: 'White',
   specialSkill: 'Being a Sassafras',
   typeOfPet: 'Cat',
@@ -11,7 +11,7 @@ const pets = [
   imageUrl: 'https://awscape.org.za/wp-content/uploads/2018/05/dog-200x200.jpg',
   name: 'Duke',
   color: 'Yellow',
-  specialSkill: 'Supervising Deck Construction',
+  specialSkill: 'Supervising Construction',
   typeOfPet: 'Dog',
   },
 
@@ -49,7 +49,7 @@ const pets = [
 ];
 
 const printToDom = (selector, textToPrint) => {
-  const selectedDiv = document.querySelector(selector);
+  const selectedDiv = document.getElementById(selector);
   selectedDiv.innerHTML = textToPrint;
 }
 
@@ -58,15 +58,15 @@ const petCards = () => {
 
   for (let i = 0; i < pets.length; i++) {
     domString += '<div class = "animals-card">';
-    domString += `<h2>${pets[i].name}</h2>`;
+    domString += `<h2 class="animals-card-h2 ${pets[i].typeOfPet}">${pets[i].name}</h2>`;
     domString += `<img src = ${pets[i].imageUrl}>`;
     domString += `<h4>${pets[i].color}</h4>`;
     domString += `<p>${pets[i].specialSkill}</p>`;
-    domString += `<h3>${pets[i].typeOfPet}</h3>`;
+    domString += `<div class="animals-card-footer ${pets[i].typeOfPet}"> ${pets[i].typeOfPet}</div>`;
     domString += '</div>';
   }
   console.log(domString)
-  printToDom('.animals-card', domString)
+  printToDom('animals', domString)
 }
 
 const init = () => {
