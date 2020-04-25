@@ -1,22 +1,22 @@
 const pets = [
 {
-  imageUrl: 'https://www.we-are-siamese.com/images/Zorro.jpg',
+  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Odd-eyed_Turkish_Angora_cat_-_20080830.jpg/200px-Odd-eyed_Turkish_Angora_cat_-_20080830.jpg',
   name: 'Lara',
-  color: 'Lynx Pointe',
+  color: 'White',
   specialSkill: 'Being a Sassafras',
   typeOfPet: 'Cat',
   },
 
   {
-  imageUrl: 'https://s3.amazonaws.com/filestore.rescuegroups.org/4002/pictures/animals/4112/4112978/11502839_500x432.jpg',
+  imageUrl: 'https://awscape.org.za/wp-content/uploads/2018/05/dog-200x200.jpg',
   name: 'Duke',
-  color: 'Chocolate',
+  color: 'Yellow',
   specialSkill: 'Supervising Deck Construction',
   typeOfPet: 'Dog',
   },
 
   {
-  imageUrl: 'https://qph.fs.quoracdn.net/main-qimg-f43f95c42b6497cd781b8210491b3a38.webp',
+  imageUrl: 'https://shodor.org/~lukaaj/imgresize/cat-Square-200.jpg',
   name: 'Sammy',
   color: 'Ginger',
   specialSkill: 'Loyalty to Owner',
@@ -24,15 +24,15 @@ const pets = [
   },
 
   {
-  imageUrl: 'https://arkvetlv.com/wp-content/uploads/2017/05/Choosing-Your-Dog-Mixed-Breed-or-Purebred-Las-Vegas-NV-300x220.jpg',
+  imageUrl: 'https://walkandwagchapelhill.com/wp-content/uploads/2017/03/justin-veenema-147056-200x200.jpg',
   name: 'Reba',
-  color: 'Brown, White, & Black',
+  color: 'Brown & White',
   specialSkill: 'Excellent Co-worker',
   typeOfPet: 'Dog'
   },
 
   {
-  imageUrl: 'https://www.wwwallaboutcats.com/wp-content/uploads/2016/06/cat14-1-1.jpg', 
+  imageUrl: 'https://www.ycspca.org/wp-content/uploads/Cool-Cat2-200x200.png', 
   name: 'Kyra',
   color: 'Brown',
   specialSkill: 'Snuggles',
@@ -40,7 +40,7 @@ const pets = [
   },
 
   {
-  image: 'https://s3.envato.com/files/a389292b-0443-4f6d-86ee-e2a9cee02faa/inline_image_preview.jpg',
+  imageUrl: 'https://i.pinimg.com/originals/71/d0/11/71d0116ba6717259cd05b5bd9e02e600.jpg',
   name: 'Carlos',
   color: 'White',
   specialSkill: 'Getting you an A+',
@@ -48,4 +48,29 @@ const pets = [
   },
 ];
 
-console.log(pets);
+const printToDom = (selector, textToPrint) => {
+  const selectedDiv = document.querySelector(selector);
+  selectedDiv.innerHTML = textToPrint;
+}
+
+const petCards = () => {
+  let domString = '';
+
+  for (let i = 0; i < pets.length; i++) {
+    domString += '<div class = "animals-card">';
+    domString += `<h2>${pets[i].name}</h2>`;
+    domString += `<img src = ${pets[i].imageUrl}>`;
+    domString += `<h4>${pets[i].color}</h4>`;
+    domString += `<p>${pets[i].specialSkill}</p>`;
+    domString += `<h3>${pets[i].typeOfPet}</h3>`;
+    domString += '</div>';
+  }
+  console.log(domString)
+  printToDom('.animals-card', domString)
+}
+
+const init = () => {
+  petCards();
+}
+
+init();
