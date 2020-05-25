@@ -1,6 +1,6 @@
 
 ## Description
-Pet Adoption is an example project for event listeners in JavaScript. 
+Pet Adoption is an example project for Print to DOM with JavaScript. 
 
 ### Feature List
 * Show all adobtable animals in a collection
