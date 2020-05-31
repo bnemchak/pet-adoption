@@ -5,12 +5,15 @@ Pet Adoption is an example project for Print to DOM with JavaScript.
 ### Feature List
 * Show all adobtable animals in a collection
 * Filter pets by type
-## Screenshots
-![Main View](./images/pet-adoption.png)
+
+<!-- ## Screenshots
+![Main View](./images/pet-adoption.png) -->
+
 ## How To Run
 1. Clone down this repo
 1. Use your favorite http server (like [http-server](https://www.npmjs.com/package/http-server)) to serve it up (`hs`)
 1. In your browser, go where it's being served (default is localhost:8081)
+
 ## Contributors
 * [Brooke Nemchak](https://github.com/bnemchak)
 
